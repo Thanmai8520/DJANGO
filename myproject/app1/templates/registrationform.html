@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+
+    <script>
+    function validate_username()
+    {
+        var res=document.forms.reg_form.username.value;
+
+        if(res==""|| (res.length < 5 || res.length >15))
+        {
+            document.getElementById("username").style.border = "2px solid red";
+            document.getElementById("msg1").style.color = "red";
+            document.getElementById("msg1").innerHTML="username can contain 5 to 15 characters only";
+            return false;
+        }
+        else
+        {
+            document.getElementById("username").style.border = "2px solid green";
+            document.getElementById("msg1").style.color = "green";
+            document.getElementById("msg1").innerHTML="username satisfied";
+            return true;
+        }
+    }
+    function validate_password()
+    {
+        var pass=document.forms.reg_form.pwd.value;
+        // to check password starts with letter & contains atleast one numeric digit and  a special symbol
+        // with 7 to 15 characters
+        var patt=/^[A-Za-z](?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+        var res=patt.test(pass);
+        if(pass==""||res==false)
+        {
+            document.getElementById("pwd").style.border = "2px solid red";
+            document.getElementById("msg2").style.color = "red";
+            document.getElementById("msg2").innerHTML="password must start with letter  contains atleast a number,<br> a special symbol having 8 to 15 characters";
+            return false;
+        }
+        else
+        {
+           document.getElementById("pwd").style.border = "2px solid green";
+           document.getElementById("msg2").style.color = "green";
+           document.getElementById("msg2").innerHTML="password satisfied";
+           return true;
+        }
+    }
+
+    function validate_mobile()
+    {
+        var res=document.forms.reg_form.mobile.value;
+        if(res.length==10)
+        {
+        document.getElementById("mobile").style.border = "2px solid green";
+        document.getElementById("msg3").style.color = "green";
+        document.getElementById("msg3").innerHTML="mobile number satisfied";
+        return true;
+        }
+        // if(res==""|| (res.length>=0 && res.length <10)||res.length>10)
+        else
+        {
+            document.getElementById("mobile").style.border = "2px solid red";
+            document.getElementById("msg3").style.color = "red";
+            document.getElementById("msg3").innerHTML="mobile number must be of 10 digits";
+            return false;
+        }
+    }
+    function validate_all()
+    {
+       if(validate_username()&&validate_password()&&validate_mobile())
+        return true;
+       else
+        return false;
+    }
+    </script>
+</head>
+
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<form name="reg_form"  action="regdetails/"  method="post" onsubmit="return validate_all()">
+    {% csrf_token %}
+    <h2>Sign up</h2>
+    <input type="text" name="username" id="username" placeholder="username" onblur="return validate_username()" required><br>
+     <p id="msg1"></p>
+     <input type="password" name="pwd" id="pwd" placeholder="password"  onblur="return validate_password()" required><br>
+    <p id="msg2"></p>
+    <input type="email" name="email" placeholder="email" required><br>
+     <input type="number" name="mobile" id="mobile" placeholder="mobile number" onblur="return validate_mobile()" required  ><br>
+     <p id="msg3"></p>
+     <input type="submit" value="register">
+    <input type="reset" value="reset"><br>
+    Have already an account? <a href="/login"> Login here</a>
+</form>
+{% endblock %}
+
+
+
+</body>
+
+</html>

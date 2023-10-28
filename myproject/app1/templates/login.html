@@ -1,0 +1,27 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="module1/" method="POST">
+    {% csrf_token %}
+
+    <h2>Login</h2>
+    <input type="text" name="username" placeholder="Username" required><br>
+    <p></p>
+    <input type="password" name="pwd" placeholder="password" required><br>
+    <input type="submit" value="login">
+    <input type="reset" value="reset"><br>
+    newuser <a href="/newuser"> Register here</a>
+</form>
+
+{% endblock %}
+</body>
+</html>

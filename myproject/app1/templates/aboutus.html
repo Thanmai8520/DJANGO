@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+
+<style>
+   .about
+   {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size:36;
+   }
+   h3,p{
+   font-family: cursive;
+   }
+</style>
+
+</head>
+<body style="background-color:  #f2f2f2;">
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="about">ABOUT US :</h1>
+<h3 style="color:Tomato;">Here is the main content of the website :</h3>
+   {% load static %}
+  <div class="mySlides fade">
+  <img src="{% static 'images/aagri.png' %}" style="width:1400px" height="450px">
+  </div>
+        <p>AS AGRI AND AQUA LLP, established in March 2018, is India’s leading company that specializes in innovative and high-tech Agriculture and Aquaculture development and turnkey solutions.</p><br>
+        <p>Led by a group of 10 experienced and hardworking stalwarts from different verticals, A S AGRI AND AQUA LLP was formed to fulfil the vision that saw a revolutionized Agriculture and Aquaculture Ecosystem in India and ensured self-sufficiency, sustainability, and an improved socio-economic status for every Indian farmer. </p><br>
+        <p>Over the past few years, A S AGRI AND AQUA  LLP has continued to cement its position as a prominent innovator, solution-provider, and a pioneering force in the Agriculture and Aquaculture sectors.</p><br>
+        <p>As a part of the A S Group of Companies conglomerate, A S AGRI AND AQUA LLP deals with research and development of cutting-edge technology and turnkey solutions in Soil-based Vertical Farming, Polyhouse construction, Aquaculture and Fish Farming, Health Care & Food Supplements, and more. We are also involved in projects like Turmeric Trading, Digital Rural Connectivity Projects, including our very own flagship e-Village app.</p><br>
+        <p>With the head office based in Thane, Maharashtra, A S AGRI AND AQUA’s reach spans across India, and continues to grow beyond the borders, including expansions in Oman, Qatar, UAE, UK, and Sri Lanka.</p><br>
+<form action="/contactus">
+    <input type="submit" value="Contact">
+</form>
+{% endblock %}
+</body>
+</html>

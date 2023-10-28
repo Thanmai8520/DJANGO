@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/appicon1.jpg' %} ">
+    <link rel="stylesheet" href= "{% static 'css/main.css'%}">
+
+<style>
+     a{
+       text-decoration:none;
+     }
+     .logo
+     {
+       font-size:40px;
+     }
+</style>
+</head>
+<body>
+
+
+ <header>
+  <div>
+      <a  class="logo" href="/">
+        <!--<img src="{% static 'images/appicon1.jpg' %}" alt="Logo" width="50" height="50" >-->
+        AGRIAQUAGO
+    </a>
+  </div>
+
+
+
+ </header>
+
+<div class="content">
+
+    {% block content%} {% endblock %}
+ </div>
+
+<footer>
+    <hr>
+    <h3>contact us</h3>
+    <h3>email:agriagro@gmail.com</h3>
+</footer>
+
+</body>
+</html>

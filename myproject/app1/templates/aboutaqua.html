@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT AQUACULTURE</title>
+
+<style>
+   .about
+   {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size:36;
+   }
+   h3,p{
+   font-family: cursive;
+   }
+</style>
+
+</head>
+<body style="background-color:powderblue;">
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="about">ABOUT AQUACULTURE :</h1>
+<h3 style="color:Tomato;">Here is the main content of the website :</h3>
+   {% load static %}
+  <div class="mySlides fade">
+  <img src="{% static 'images/img2.png' %}" style="width:1500px" height="550px">
+  </div>
+        <p>Aquaculture is the breeding, rearing, and harvesting of fish, shellfish, algae, and other organisms in all types of water environments.</p><br>
+        <p>Aquaculture is a method used to produce food and other commercial products, restore habitat and replenish wild stocks, and rebuild populations of threatened and endangered species.</p><br>
+        <p>There are two main types of aquaculture—marine and freshwater. NOAA efforts primarily focus on marine aquaculture, which refers to farming species that live in the ocean and estuaries.</p><br>
+        <p>There are many ways to farm marine shellfish, including “seeding” small shellfish on the seafloor or by growing them in bottom or floating cages. Marine fish farming is typically done in net pens in the water or in tanks on land.</p><br>
+        <p>U.S. freshwater aquaculture produces species such as catfish and trout. Freshwater aquaculture primarily takes place in ponds or other manmade systems.</p><br>
+        <p>Aquaculture is breeding, raising, and harvesting fish, shellfish, and aquatic plants. Basically, it’s farming in water. U.S. aquaculture is an environmentally responsible source of food and commercial products, helps to create healthier habitats, and is used to rebuild stocks of threatened or endangered species.</p><br>
+<form action="/contactus">
+    <input type="submit" value="Contact">
+</form>
+{% endblock %}
+</body>
+</html>

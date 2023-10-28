@@ -1,0 +1,46 @@
+
+       header{
+            background-color:lightblue;
+            font-family:"Comic Sans MS", cursive, sans-serif;
+            border: 2px solid black;
+            text-align:left;
+
+        }
+        footer{
+            background-color:lightblue;
+            text-align:center;
+            border: 2px solid black;
+            color:white;
+        }
+        .content{
+            font-family: "Audiowide", sans-serif;
+            text-align:center;
+            border: 2px solid black;
+            min-height:520px;
+        }
+
+        input{
+            width:40%;
+            padding:15px 15px;
+            margin:10px 0;
+            border: 3px solid lightblue;
+            border-radius:10px;
+            font-size:20px;
+        }
+        body{
+            margin:0px;
+        }
+        input[type='submit'], input[type='reset']
+        {
+            width:17%;
+            padding:15px 15px;
+            margin:10px 0;
+            border: 2px solid lightgreen;
+            border-radius:10px;
+            font-size:20px;
+            background-color:ivory;
+            color:black;
+            cursor:pointer;
+        }
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT AGRICULTURE</title>
+
+<style>
+   .about
+   {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size:36;
+   }
+   h3,p{
+   font-family: cursive;
+   }
+</style>
+
+</head>
+<body style="background-color:powderblue;">
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="about">ABOUT AGRICULTURE :</h1>
+<h3 style="color:Tomato;">Here is the main content of the website :</h3>
+{% load static %}
+  <div class="mySlides fade">
+  <img src="{% static 'images/img1.png' %}" style="width:1500px" height="550px">
+  </div>
+        <p>Globally, 500 million households depend on agriculture for their livelihoods. Smallholder farmers are responsible for producing the food on which up to 70 per cent of the world’s population relies upon, however, they remain financially excluded and increasingly vulnerable to changing climate patterns affecting their yields.</p><br>
+        <p> We are closing the gap between the need for social and environmental impact and equitability in the food value chain and commercial interests of stakeholders in the agricultural industry and AgriTech space. We seek, identify, promote, test and scale models that deliver social impact while rewarding private sector participation. We inform donor and investor community on the operational and business models that have the highest potential for impact and sustainability and we forge partnerships required for innovation, inclusion and scale. </p><br>
+        <p>By providing funding and deep technical expertise to service providers, we support scalable commercial digital solutions that impact smallholder farmers and the agricultural industry at large.</p><br>
+        <p>All our work is done with a social impact objective. Everything we learn is made available to investors, donors, mobile operators, AgriTech providers, content developers and others on an unrestricted and royalty-free basis. All the lessons learned from our implementation projects are available for public use.</p><br>
+        <p>With the head office based in Thane, Maharashtra, A S AGRI reach spans across India, and continues to grow beyond the borders, including expansions in Oman, Qatar, UAE, UK, and Sri Lanka.</p><br>
+<form action="/contactus">
+    <input type="submit" value="Contact">
+</form>
+{% endblock %}
+</body>
+</html>
